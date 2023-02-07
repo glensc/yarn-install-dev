@@ -2,9 +2,10 @@
 
 Install selected packages from `devDependencies`.
 
-This is to provide solution for [yarnpkg/yarn#5201].
+This is to provide solution for [yarnpkg/yarn#5201] and [yarnpkg/yarn#3254].
 
 [yarnpkg/yarn#5201]: https://github.com/yarnpkg/yarn/issues/5201
+[yarnpkg/yarn#3254]: https://github.com/yarnpkg/yarn/issues/3254
 
 ## Installation
 
