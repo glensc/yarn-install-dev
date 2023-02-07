@@ -1,0 +1,6 @@
+{
+  "name": "yarn-install-dev",
+  "repository": "https://github.com/glensc/yarn-install-dev",
+  "author": "Elan Ruusamäe <glen@pld-linux.org>",
+  "license": "MIT"
+}
