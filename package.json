@@ -6,6 +6,9 @@
   "engines": {
     "node": ">=14"
   },
+  "scripts": {
+    "esbuild": "esbuild --platform=node --target=node14 --bundle --sourcemap --outfile=dist/yarn-install-dev.js src/yarn-install-dev.ts"
+  },
   "devDependencies": {
     "@tsconfig/node14": "^1.0.3",
     "@types/node": "^14",
