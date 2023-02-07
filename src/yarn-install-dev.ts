@@ -35,7 +35,7 @@ const addDeps = async (packagePath: string, dependencies: string[]): Promise<voi
   const yarnInstall = "yarn install --frozen-lockfile --production";
 
   console.info(`Running ${yarnInstall}`);
-  process.stdout.write((await exec(yarnInstall)).join(EOL));
+  process.stdout.write((await exec(yarnInstall)).join(EOL) + EOL);
 };
 
 const main = async (dependencies: string[]): Promise<void> => {
