@@ -1,5 +1,6 @@
 import { writeFile } from "node:fs/promises";
 import { copyFile } from "node:fs/promises";
+import { EOL } from "node:os";
 
 import findUp from "find-up";
 
@@ -29,7 +30,11 @@ const addDeps = async (packagePath: string, dependencies: string[]): Promise<voi
 
   await writeFile(packagePath, JSON.stringify(pkg));
   console.debug(`Wrote ${packagePath}`, pkg);
-  await exec("yarn install --frozen-lockfile --production");
+
+  const yarnInstall = "yarn install --frozen-lockfile --production";
+
+  console.info(`Running ${yarnInstall}`);
+  process.stdout.write((await exec(yarnInstall)).join(EOL));
 };
 
 const main = async (dependencies: string[]): Promise<void> => {
