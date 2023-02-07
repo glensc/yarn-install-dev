@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { writeFile } from "node:fs/promises";
 import { copyFile } from "node:fs/promises";
 import { EOL } from "node:os";
