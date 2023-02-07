@@ -11,7 +11,7 @@
   },
   "scripts": {
     "esbuild": "esbuild --platform=node --target=node14 --bundle --sourcemap --outfile=dist/yarn-install-dev.js src/yarn-install-dev.ts",
-    "prepublishOnly": "yarn esbuild"
+    "prepublishOnly": "set -e; yarn install; yarn esbuild; yarn version --new-version $APP_VERSION --no-git-tag-version"
   },
   "devDependencies": {
     "@tsconfig/node14": "^1.0.3",
