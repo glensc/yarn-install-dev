@@ -1,11 +1,6 @@
 {
   /* Visit https://aka.ms/tsconfig to read more about this file */
+  "extends": "@tsconfig/node14/tsconfig.json",
   "compilerOptions": {
-    "target": "es2016",
-    "module": "commonjs",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true,
   },
 }
