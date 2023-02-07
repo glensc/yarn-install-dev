@@ -2,5 +2,6 @@
   /* Visit https://aka.ms/tsconfig to read more about this file */
   "extends": "@tsconfig/node14/tsconfig.json",
   "compilerOptions": {
+	"declaration": true,
   },
 }
