@@ -17,6 +17,12 @@ const addDeps = async (packagePath: string, dependencies: string[]): Promise<voi
 
   // Copy from devDependencies
   for (const dep of dependencies) {
+    if (!pkg.devDependencies[dep]) {
+      console.warn(`Skipping in-existent dependency: ${dep}`);
+
+      continue;
+    }
+
     console.info(`Copying from devDependencies: ${dep}`);
     pkg.dependencies[dep] = pkg.devDependencies[dep];
   }
