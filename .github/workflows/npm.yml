@@ -32,10 +32,13 @@ jobs:
           node-version: "14.x"
           registry-url: "https://registry.npmjs.org"
 
+      - run: yarn set-version
+        env:
+          APP_VERSION: ${{ steps.vars.outputs.version }}
+
       - name: Publish
         run: npm publish --access public
         env:
-          APP_VERSION: ${{ steps.vars.outputs.version }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
 # vim:ft=yaml:et:ts=2:sw=2
