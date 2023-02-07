@@ -3,6 +3,9 @@
   "repository": "https://github.com/glensc/yarn-install-dev",
   "author": "Elan Ruusamäe <glen@pld-linux.org>",
   "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  },
   "devDependencies": {
     "@tsconfig/node14": "^1.0.3",
     "typescript": "^4.9.5"
